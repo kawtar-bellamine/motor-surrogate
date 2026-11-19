@@ -1,0 +1,264 @@
+{
+ "n_designs": 400,
+ "protocol": "5-fold cross-validation, every design predicted once",
+ "fem_seconds_per_design": 18.1,
+ "models": {
+  "ridge (linear on log)": {
+   "torque_mean": {
+    "r2": 0.9845,
+    "median_err_pct": 3.01,
+    "p90_err_pct": 7.72
+   },
+   "torque_ripple_pct": {
+    "r2": 0.6454,
+    "median_err_pct": 21.83,
+    "p90_err_pct": 57.67
+   },
+   "cogging_pp": {
+    "r2": 0.7516,
+    "median_err_pct": 30.5,
+    "p90_err_pct": 103.39
+   },
+   "B_tooth_p95": {
+    "r2": 0.8415,
+    "median_err_pct": 3.14,
+    "p90_err_pct": 8.89
+   },
+   "fit_seconds": 0.0
+  },
+  "k nearest neighbours": {
+   "torque_mean": {
+    "r2": 0.8214,
+    "median_err_pct": 19.9,
+    "p90_err_pct": 52.41
+   },
+   "torque_ripple_pct": {
+    "r2": 0.3889,
+    "median_err_pct": 29.14,
+    "p90_err_pct": 73.9
+   },
+   "cogging_pp": {
+    "r2": 0.4698,
+    "median_err_pct": 45.97,
+    "p90_err_pct": 190.25
+   },
+   "B_tooth_p95": {
+    "r2": 0.7728,
+    "median_err_pct": 3.81,
+    "p90_err_pct": 11.65
+   },
+   "fit_seconds": 0.0
+  },
+  "gradient boosting": {
+   "torque_mean": {
+    "r2": 0.9802,
+    "median_err_pct": 3.71,
+    "p90_err_pct": 12.14
+   },
+   "torque_ripple_pct": {
+    "r2": 0.7026,
+    "median_err_pct": 19.26,
+    "p90_err_pct": 55.86
+   },
+   "cogging_pp": {
+    "r2": 0.8266,
+    "median_err_pct": 25.39,
+    "p90_err_pct": 88.28
+   },
+   "B_tooth_p95": {
+    "r2": 0.8254,
+    "median_err_pct": 2.52,
+    "p90_err_pct": 9.38
+   },
+   "fit_seconds": 2.12
+  },
+  "neural network (MLP)": {
+   "torque_mean": {
+    "r2": 0.9839,
+    "median_err_pct": 4.45,
+    "p90_err_pct": 11.52
+   },
+   "torque_ripple_pct": {
+    "r2": 0.7863,
+    "median_err_pct": 20.01,
+    "p90_err_pct": 51.99
+   },
+   "cogging_pp": {
+    "r2": 0.8285,
+    "median_err_pct": 24.7,
+    "p90_err_pct": 90.21
+   },
+   "B_tooth_p95": {
+    "r2": 0.9493,
+    "median_err_pct": 1.7,
+    "p90_err_pct": 5.09
+   },
+   "fit_seconds": 5.36
+  }
+ },
+ "best_model": "neural network (MLP)",
+ "learning_curve": {
+  "gradient boosting": {
+   "40": {
+    "torque_mean": 26.64,
+    "torque_ripple_pct": 37.78,
+    "cogging_pp": 45.06,
+    "B_tooth_p95": 8.55
+   },
+   "80": {
+    "torque_mean": 13.2,
+    "torque_ripple_pct": 27.44,
+    "cogging_pp": 43.6,
+    "B_tooth_p95": 4.94
+   },
+   "160": {
+    "torque_mean": 5.51,
+    "torque_ripple_pct": 26.0,
+    "cogging_pp": 32.53,
+    "B_tooth_p95": 4.86
+   },
+   "320": {
+    "torque_mean": 4.23,
+    "torque_ripple_pct": 17.41,
+    "cogging_pp": 21.76,
+    "B_tooth_p95": 2.58
+   }
+  },
+  "neural network (MLP)": {
+   "40": {
+    "torque_mean": 8.94,
+    "torque_ripple_pct": 31.26,
+    "cogging_pp": 44.65,
+    "B_tooth_p95": 4.32
+   },
+   "80": {
+    "torque_mean": 5.71,
+    "torque_ripple_pct": 28.15,
+    "cogging_pp": 46.23,
+    "B_tooth_p95": 2.48
+   },
+   "160": {
+    "torque_mean": 5.09,
+    "torque_ripple_pct": 27.64,
+    "cogging_pp": 30.96,
+    "B_tooth_p95": 1.78
+   },
+   "320": {
+    "torque_mean": 5.27,
+    "torque_ripple_pct": 20.97,
+    "cogging_pp": 20.6,
+    "B_tooth_p95": 1.62
+   }
+  }
+ },
+ "inference_ms_per_design": 0.00117,
+ "speedup_vs_fem": 15436847,
+ "optimisation": {
+  "spec": {
+   "R_max": 0.045,
+   "J_max": 6.0,
+   "torque_min": 25.0,
+   "cogging_max": 1.0
+  },
+  "candidates": 100000,
+  "screen_seconds": 0.08,
+  "predicted_feasible": 1589,
+  "fem_runs": 8,
+  "feasible_after_fem": 8,
+  "best": {
+   "torque_mean": 28.3374,
+   "torque_ripple_pct": 3.9183,
+   "cogging_pp": 0.5067,
+   "B_tooth_p95": 1.6126,
+   "B_iron_max": 1.8254,
+   "elements": 14847,
+   "Q": 36.0,
+   "p": 2.0,
+   "R": 0.041,
+   "g": 0.0015,
+   "hm": 0.0051,
+   "alpha": 0.8094,
+   "so": 0.2288,
+   "tw": 0.532,
+   "Br": 1.1101,
+   "J": 4.8501,
+   "psi": 3.6094
+  },
+  "baselines": {
+   "random_8_fem_runs": {
+    "feasible": 0,
+    "best_ripple": null
+   },
+   "random_40_fem_runs": {
+    "feasible": 5,
+    "best_ripple": 7.16
+   }
+  },
+  "pred_vs_fem": [
+   {
+    "pred_torque": 31.72,
+    "fem_torque": 29.2,
+    "pred_ripple": 3.45,
+    "fem_ripple": 5.59,
+    "pred_cogging": 0.24,
+    "fem_cogging": 0.323
+   },
+   {
+    "pred_torque": 27.77,
+    "fem_torque": 25.9,
+    "pred_ripple": 3.49,
+    "fem_ripple": 4.46,
+    "pred_cogging": 0.188,
+    "fem_cogging": 0.43
+   },
+   {
+    "pred_torque": 29.19,
+    "fem_torque": 29.93,
+    "pred_ripple": 3.51,
+    "fem_ripple": 6.2,
+    "pred_cogging": 0.337,
+    "fem_cogging": 0.654
+   },
+   {
+    "pred_torque": 28.56,
+    "fem_torque": 25.6,
+    "pred_ripple": 3.55,
+    "fem_ripple": 6.02,
+    "pred_cogging": 0.475,
+    "fem_cogging": 0.616
+   },
+   {
+    "pred_torque": 36.17,
+    "fem_torque": 35.05,
+    "pred_ripple": 3.57,
+    "fem_ripple": 5.84,
+    "pred_cogging": 0.404,
+    "fem_cogging": 0.456
+   },
+   {
+    "pred_torque": 28.52,
+    "fem_torque": 28.54,
+    "pred_ripple": 3.74,
+    "fem_ripple": 7.42,
+    "pred_cogging": 0.592,
+    "fem_cogging": 0.709
+   },
+   {
+    "pred_torque": 26.42,
+    "fem_torque": 28.34,
+    "pred_ripple": 3.77,
+    "fem_ripple": 3.92,
+    "pred_cogging": 0.534,
+    "fem_cogging": 0.507
+   },
+   {
+    "pred_torque": 32.82,
+    "fem_torque": 28.37,
+    "pred_ripple": 3.79,
+    "fem_ripple": 5.8,
+    "pred_cogging": 0.261,
+    "fem_cogging": 0.351
+   }
+  ]
+ }
+}

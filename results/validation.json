@@ -1,0 +1,207 @@
+{
+ "slotless_vs_exact": [
+  {
+   "p": 2,
+   "hm_mm": 4.0,
+   "gap_mm": 1.0,
+   "h_gap_mm": 0.333,
+   "elements": 18144,
+   "err_Br_pct": 0.832,
+   "err_Btheta_pct": 0.95,
+   "Br_peak_fem": 0.9069,
+   "Br_peak_exact": 0.9047,
+   "torque_should_be_0": 2e-06
+  },
+  {
+   "p": 2,
+   "hm_mm": 4.0,
+   "gap_mm": 1.0,
+   "h_gap_mm": 0.167,
+   "elements": 48132,
+   "err_Br_pct": 0.347,
+   "err_Btheta_pct": 0.531,
+   "Br_peak_fem": 0.9067,
+   "Br_peak_exact": 0.9063,
+   "torque_should_be_0": -1e-06
+  },
+  {
+   "p": 4,
+   "hm_mm": 3.0,
+   "gap_mm": 0.7,
+   "h_gap_mm": 0.233,
+   "elements": 25680,
+   "err_Br_pct": 0.893,
+   "err_Btheta_pct": 1.115,
+   "Br_peak_fem": 0.9308,
+   "Br_peak_exact": 0.9287,
+   "torque_should_be_0": -4e-06
+  },
+  {
+   "p": 4,
+   "hm_mm": 3.0,
+   "gap_mm": 0.7,
+   "h_gap_mm": 0.117,
+   "elements": 68772,
+   "err_Br_pct": 0.36,
+   "err_Btheta_pct": 0.614,
+   "Br_peak_fem": 0.9305,
+   "Br_peak_exact": 0.9299,
+   "torque_should_be_0": -6.8e-05
+  }
+ ],
+ "mesh_convergence": [
+  {
+   "Q": 12,
+   "p": 2,
+   "elements": [
+    21462,
+    54496
+   ],
+   "torque_mean": [
+    17.971,
+    18.004,
+    -0.18
+   ],
+   "torque_ripple_pct": [
+    56.4508,
+    56.173,
+    0.49
+   ],
+   "cogging_pp": [
+    5.3337,
+    5.3463,
+    -0.24
+   ]
+  },
+  {
+   "Q": 24,
+   "p": 4,
+   "elements": [
+    29947,
+    76129
+   ],
+   "torque_mean": [
+    37.7486,
+    37.7543,
+    -0.02
+   ],
+   "torque_ripple_pct": [
+    24.9128,
+    24.8077,
+    0.42
+   ],
+   "cogging_pp": [
+    12.487,
+    12.4129,
+    0.6
+   ]
+  },
+  {
+   "Q": 24,
+   "p": 2,
+   "elements": [
+    26778,
+    68576
+   ],
+   "torque_mean": [
+    52.4498,
+    52.4038,
+    0.09
+   ],
+   "torque_ripple_pct": [
+    16.2855,
+    16.3354,
+    -0.31
+   ],
+   "cogging_pp": [
+    1.9866,
+    1.8368,
+    8.16
+   ]
+  },
+  {
+   "Q": 36,
+   "p": 3,
+   "elements": [
+    18514,
+    44168
+   ],
+   "torque_mean": [
+    79.6067,
+    79.6893,
+    -0.1
+   ],
+   "torque_ripple_pct": [
+    15.1281,
+    14.9097,
+    1.47
+   ],
+   "cogging_pp": [
+    3.0572,
+    2.9339,
+    4.2
+   ]
+  }
+ ],
+ "cogging_sampling": [
+  {
+   "Q": 48,
+   "p": 8,
+   "cogging_8": 4.7183,
+   "cogging_24": 4.7857,
+   "diff_pct": -1.41
+  },
+  {
+   "Q": 24,
+   "p": 4,
+   "cogging_8": 9.6183,
+   "cogging_24": 9.6183,
+   "diff_pct": 0.0
+  },
+  {
+   "Q": 36,
+   "p": 2,
+   "cogging_8": 0.5988,
+   "cogging_24": 0.5988,
+   "diff_pct": 0.0
+  }
+ ],
+ "saturation": {
+  "design": "36 slots, 6 poles, R 40 mm, gap 0.8 mm, stack 0.1 m",
+  "J_A_per_mm2": [
+   1,
+   2,
+   4,
+   6,
+   8,
+   10,
+   12
+  ],
+  "torque_saturating": [
+   7.338,
+   14.631,
+   29.017,
+   43.131,
+   56.814,
+   69.773,
+   82.12
+  ],
+  "torque_linear_iron": [
+   7.467,
+   14.937,
+   29.879,
+   44.821,
+   59.762,
+   74.704,
+   89.646
+  ]
+ },
+ "old_semi_analytical_vs_fem": {
+  "n": 60,
+  "median_err_torque_pct": 14.1,
+  "median_err_cogging_pct": 49.3,
+  "median_err_ripple_pct": 53.6,
+  "torque_ratio_old_over_fem_J_le_4": 1.138,
+  "torque_ratio_old_over_fem_J_ge_8": 1.166
+ }
+}
